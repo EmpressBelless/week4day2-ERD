@@ -1,0 +1,34 @@
+INSERT INTO
+	INVENTORY (product_id, product_name, date_ordered, product_vendor, product_maker, description, quantity)
+		VALUES 
+			(1, 'TWIX', '2019-12-31', 'Mickys Warehouse', 'Mars', 'Yummy candy bar', 5 ),
+			(2, 'Snickers', '1972-02-09', 'Diamond Foods', 'Mars', 'Yummy candy bar', 22);
+-- I learned not to have double quotes around my intended screens and put single quotes around my dates. 
+INSERT INTO
+	CONCESSION (transaction_id, product_id, date_transaction, product_price, product_name)
+		VALUES
+			(1, 2, '2021-04-06', 5.99, 'TWIX'),
+			(2, 2,'2021-04-06', 6.99, 'Snickers');
+			
+INSERT INTO 
+	CUSTOMERS (customer_id, first_name, last_name, date_visited, ticket_id)
+		VALUES
+			(1001, 'Dr', 'Who', '2018-07-04', 444),
+			(1002, 'Amy', 'Pond', '2016-05-06', 234);
+INSERT INTO
+	TICKETS (ticket_id, tickets_sold, transaction_date, film_id, customer_id)
+		VALUES 
+			(444, 5, '1955-02-10', 4, 1001),
+			(234, 3, '1978-07-09', 5, 1002);
+INSERT INTO
+	movie_leases (film_id, date_leased, date_lease_ends, amount_of_purchase, film_supplier)
+		VALUES
+			(4, '1954-01-01', '2021-11-10', 10000, 'Warner Bros'),
+			(5, '1978-07-01', '2021-10-31', 20000, 'Disney');
+SELECT * FROM concession
+SELECT * FROM customers
+SELECT * FROM INVENTORY
+SelECT * FROm movie_leases
+UPDATE CUSTOMERS
+	SET first_name = 'Doctor'
+	Where first_name = 'Dr'
